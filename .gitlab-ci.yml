@@ -1,0 +1,17 @@
+variables:
+    MY_AWESOME_VAR_1: "Hello_my_dear_world!"
+
+before_script:
+    - echo $MY_AWESOME_VAR_1
+    - pwd
+
+linux:
+    script:
+        - mkdir build
+        - cd build
+        - cp ../poem.txt ./
+        - cat poem.txt
+        - echo $MY_AWESOME_VAR_1
+    tags:
+        - gift-adelie
+        - gift-linux
