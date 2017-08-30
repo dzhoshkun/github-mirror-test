@@ -113,7 +113,7 @@ html_theme = 'classic'
 # documentation.
 #
 html_theme_options = {
-    "rightsidebar": "true",  # (true or false): Put the sidebar on the right side. Defaults to False.
+    # "rightsidebar": "true",  # (true or false): Put the sidebar on the right side. Defaults to False.
     # stickysidebar  (true or false): Make the sidebar “fixed” so that it doesn’t scroll out of view for long body content. This may not work well with all browsers. Defaults to False.
     # collapsiblesidebar (true or false): Add an experimental JavaScript snippet that makes the sidebar collapsible via a button on its side. Doesn’t work with “stickysidebar”. Defaults to False.
     "externalrefs": "true",  # (true or false): Display external links differently from internal links. Defaults to False.
@@ -131,12 +131,12 @@ html_theme_options = {
     "bgcolor": "#FEFEFE",  # (CSS color): Body background color.
     "textcolor": "#0A0A0A",  # (CSS color): Body text color.
     "linkcolor": "#CC0000",  # (CSS color): Body link color.
-    # visitedlinkcolor (CSS color): Body color for visited links.
+    "visitedlinkcolor": "#B32929",  # (CSS color): Body color for visited links.
     "headbgcolor": "#DDDDD6",  # (CSS color): Background color for headings.
     "headtextcolor": "#0A0A0A",  # (CSS color): Text color for headings.
     "headlinkcolor": "#CC0000",  # (CSS color): Link color for headings.
     "codebgcolor": "#DDDDD6",  # (CSS color): Background color for code blocks.
-    # codetextcolor (CSS color): Default text color for code blocks, if not set differently by the highlighting style.
+    "codetextcolor": "#0A0A0A",  # (CSS color): Default text color for code blocks, if not set differently by the highlighting style.
     # bodyfont (CSS font-family): Font for normal text.
     # headfont (CSS font-family): Font for headings.
 }
