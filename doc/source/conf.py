@@ -20,7 +20,7 @@ import os
 import sys
 
 
-module_path = os.path.abspath('..')
+module_path = os.path.abspath(os.path.join('..', '..'))
 print('module path is {}'.format(module_path))
 sys.path.insert(0, module_path)
 
