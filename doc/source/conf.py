@@ -31,7 +31,7 @@ def run_apidoc(*args):
     print('args are {}'.format(args))
     output_path = cur_dir
     print('output path is {}'.format(output_path))
-    cmd_path = 'sphinx-apidoc'
+    cmd_path = 'sphinx-apidoc-wont-work'
     if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
         # If we are, assemble the path manually
         cmd_path = os.path.abspath(os.path.join(sys.prefix, 'bin', 'sphinx-apidoc'))
