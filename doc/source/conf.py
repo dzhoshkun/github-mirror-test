@@ -22,7 +22,8 @@ import os
 import sys
 
 
-def run_apidoc():
+def run_apidoc(obj):
+    print('obj is {}'.format(obj))
     cur_dir = os.path.abspath(os.path.dirname(__file__))
     output_path = cur_dir
     print('output path is {}'.format(output_path))
