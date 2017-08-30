@@ -16,13 +16,28 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
+
+import subprocess
 import os
 import sys
 
 
-module_path = os.path.abspath(os.path.join('..', '..'))
-print('module path is {}'.format(module_path))
-sys.path.insert(0, module_path)
+def run_apidoc():
+        cur_dir = os.path.abspath(os.path.dirname(__file__))
+        output_path = cur_dir
+        print('output path is {}'.format(output_path))
+        cmd_path = 'sphinx-apidoc'
+        if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
+            # If we are, assemble the path manually
+            cmd_path = os.path.abspath(os.path.join(sys.prefix, 'bin', 'sphinx-apidoc'))
+        module_path = os.path.abspath(os.path.join(cur_dir, '..', '..'))
+        print('module path is {}'.format(module_path))
+        # TODO: try-catch
+        subprocess.check_call([cmd_path, '-o', output_path, module_path])
+
+
+def setup(app):
+    app.connect('builder-inited', run_apidoc)
 
 
 # -- General configuration ------------------------------------------------
@@ -34,8 +49,7 @@ sys.path.insert(0, module_path)
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc',
-    'sphinx.ext.imgmath']
+extensions = ['sphinx.ext.imgmath']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
