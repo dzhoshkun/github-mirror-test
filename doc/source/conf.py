@@ -23,17 +23,17 @@ import sys
 
 
 def run_apidoc():
-        cur_dir = os.path.abspath(os.path.dirname(__file__))
-        output_path = cur_dir
-        print('output path is {}'.format(output_path))
-        cmd_path = 'sphinx-apidoc'
-        if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
-            # If we are, assemble the path manually
-            cmd_path = os.path.abspath(os.path.join(sys.prefix, 'bin', 'sphinx-apidoc'))
-        module_path = os.path.abspath(os.path.join(cur_dir, '..', '..'))
-        print('module path is {}'.format(module_path))
-        # TODO: try-catch
-        subprocess.check_call([cmd_path, '-o', output_path, module_path])
+    cur_dir = os.path.abspath(os.path.dirname(__file__))
+    output_path = cur_dir
+    print('output path is {}'.format(output_path))
+    cmd_path = 'sphinx-apidoc'
+    if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
+        # If we are, assemble the path manually
+        cmd_path = os.path.abspath(os.path.join(sys.prefix, 'bin', 'sphinx-apidoc'))
+    module_path = os.path.abspath(os.path.join(cur_dir, '..', '..'))
+    print('module path is {}'.format(module_path))
+    # TODO: try-catch
+    subprocess.check_call([cmd_path, '-o', output_path, module_path])
 
 
 def setup(app):
