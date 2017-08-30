@@ -21,27 +21,27 @@ import subprocess
 import os
 import sys
 
-cur_dir = os.path.abspath(os.path.dirname(__file__))
-module_path = os.path.abspath(os.path.join(cur_dir, '..', '..'))
+
+working_dir = os.path.abspath(os.path.dirname(__file__))
+module_path = os.path.abspath(os.path.join(working_dir, '..', '..'))
 sys.path.insert(0, module_path)
 
 
-def run_apidoc(*args):
-    global cur_dir, module_path
-    print('args are {}'.format(args))
-    output_path = cur_dir
-    print('output path is {}'.format(output_path))
-    cmd_path = 'sphinx-apidoc'
-    if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
-        # If we are, assemble the path manually
-        cmd_path = os.path.abspath(os.path.join(sys.prefix, 'bin', 'sphinx-apidoc'))
-    print('module path is {}'.format(module_path))
-    # TODO: try-catch
-    subprocess.check_call([cmd_path, '-o', output_path, module_path])
+def generate_apidocs(*args):
+    """Generate API docs automatically by trawling the available modules"""
+    global working_dir, module_path
+    output_path = working_dir
+    apidoc_command_path = 'sphinx-apidoc'
+    if hasattr(sys, 'real_prefix'):  # called from a virtualenv
+        apidoc_command_path = os.path.join(sys.prefix, 'bin', 'sphinx-apidoc')
+        apidoc_command_path = os.path.abspath(apidoc_command_path)
+    subprocess.check_call([apidoc_command_path, '-o', output_path, module_path])
 
 
 def setup(app):
-    app.connect('builder-inited', run_apidoc)
+    # Hook to allow for automatic generation of API docs
+    # before doc deployment begins.
+    app.connect('builder-inited', generate_apidocs)
 
 
 # -- General configuration ------------------------------------------------
