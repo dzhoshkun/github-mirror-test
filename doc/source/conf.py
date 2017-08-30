@@ -34,7 +34,7 @@ def run_apidoc(*args):
     cmd_path = 'sphinx-apidoc-wont-work'
     if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
         # If we are, assemble the path manually
-        cmd_path = os.path.abspath(os.path.join(sys.prefix, 'bin', 'sphinx-apidoc'))
+        cmd_path = os.path.abspath(os.path.join(sys.prefix, 'bin', 'sphinx-apidoc-wont-work-virt'))
     print('module path is {}'.format(module_path))
     # TODO: try-catch
     subprocess.check_call([cmd_path, '-o', output_path, module_path])
