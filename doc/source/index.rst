@@ -10,7 +10,8 @@ Welcome to github-mirror-test's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+.. automodule:: gmt
+   :members:
 
 Indices and tables
 ==================
