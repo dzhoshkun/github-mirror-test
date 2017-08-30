@@ -26,9 +26,9 @@ module_path = os.path.abspath(os.path.join(cur_dir, '..', '..'))
 sys.path.insert(0, module_path)
 
 
-def run_apidoc(obj):
+def run_apidoc(*args):
     global cur_dir, module_path
-    print('obj is {}'.format(obj))
+    print('args are {}'.format(args))
     output_path = cur_dir
     print('output path is {}'.format(output_path))
     cmd_path = 'sphinx-apidoc'
