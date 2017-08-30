@@ -107,11 +107,39 @@ todo_include_todos = False
 #
 html_theme = 'classic'
 
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    "rightsidebar": "true",  # (true or false): Put the sidebar on the right side. Defaults to False.
+    # stickysidebar  (true or false): Make the sidebar “fixed” so that it doesn’t scroll out of view for long body content. This may not work well with all browsers. Defaults to False.
+    # collapsiblesidebar (true or false): Add an experimental JavaScript snippet that makes the sidebar collapsible via a button on its side. Doesn’t work with “stickysidebar”. Defaults to False.
+    "externalrefs": "true",  # (true or false): Display external links differently from internal links. Defaults to False.
+
+    # There are also various color and font options that can change the color scheme without having to write a custom stylesheet:
+    # footerbgcolor (CSS color): Background color for the footer line.
+    # footertextcolor (CSS color): Text color for the footer line.
+    "sidebarbgcolor": "#DDDDD6",  # (CSS color): Background color for the sidebar.
+    # sidebarbtncolor (CSS color): Background color for the sidebar collapse button (used when collapsiblesidebar is True).
+    "sidebartextcolor": "#0A0A0A",  # (CSS color): Text color for the sidebar.
+    "sidebarlinkcolor": "#CC0000",  # (CSS color): Link color for the sidebar.
+    # relbarbgcolor (CSS color): Background color for the relation bar.
+    # relbartextcolor (CSS color): Text color for the relation bar.
+    # relbarlinkcolor (CSS color): Link color for the relation bar.
+    "bgcolor": "#FEFEFE",  # (CSS color): Body background color.
+    "textcolor": "#0A0A0A",  # (CSS color): Body text color.
+    "linkcolor": "#CC0000",  # (CSS color): Body link color.
+    # visitedlinkcolor (CSS color): Body color for visited links.
+    "headbgcolor": "#DDDDD6",  # (CSS color): Background color for headings.
+    "headtextcolor": "#0A0A0A",  # (CSS color): Text color for headings.
+    "headlinkcolor": "#CC0000",  # (CSS color): Link color for headings.
+    "codebgcolor": "#DDDDD6",  # (CSS color): Background color for code blocks.
+    # codetextcolor (CSS color): Default text color for code blocks, if not set differently by the highlighting style.
+    # bodyfont (CSS font-family): Font for normal text.
+    # headfont (CSS font-family): Font for headings.
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
