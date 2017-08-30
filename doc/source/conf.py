@@ -112,6 +112,7 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
+"""
 html_theme_options = {
     # "rightsidebar": "true",  # (true or false): Put the sidebar on the right side. Defaults to False.
     # stickysidebar  (true or false): Make the sidebar “fixed” so that it doesn’t scroll out of view for long body content. This may not work well with all browsers. Defaults to False.
@@ -140,6 +141,7 @@ html_theme_options = {
     # bodyfont (CSS font-family): Font for normal text.
     # headfont (CSS font-family): Font for headings.
 }
+"""
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
