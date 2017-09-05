@@ -35,7 +35,7 @@ def generate_apidocs(*args):
     if hasattr(sys, 'real_prefix'):  # called from a virtualenv
         apidoc_command_path = os.path.join(sys.prefix, 'bin', 'sphinx-apidoc')
         apidoc_command_path = os.path.abspath(apidoc_command_path)
-    subprocess.check_call([apidoc_command_path, '--force', '-o', output_path, module_path])
+    subprocess.check_call([apidoc_command_path, '--separate', '--force', '-o', output_path, module_path])
 
 
 def setup(app):
