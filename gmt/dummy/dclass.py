@@ -1,3 +1,6 @@
+"""This is a one-liner summary of the gmt.dummy.dclass module."""
+
+
 class DClass:
     """This is just a dummy class."""
 
