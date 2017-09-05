@@ -1,6 +1,5 @@
 """
 
-.. module:: gmt
-   :synopsis: This is a one-liner summary of the gmt package.
+:synopsis: This is a one-liner summary of the gmt package.
 
 """
