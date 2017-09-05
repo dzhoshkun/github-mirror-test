@@ -1,4 +1,9 @@
-"""This is a one-liner summary of the gmt.dummy.dclass module."""
+"""
+
+.. module:: gmt.dummy.dclass
+   :synopsis: This is a one-liner summary of the gmt.dummy.dclass module.
+
+"""
 
 
 class DClass:
