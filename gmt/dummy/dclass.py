@@ -1,7 +1,7 @@
 """
 
 .. module:: gmt.dummy.dclass
-   This is a one-liner summary of the gmt.dummy.dclass module.
+   :synopsis: This is a one-liner summary of the gmt.dummy.dclass module.
 
 """
 
